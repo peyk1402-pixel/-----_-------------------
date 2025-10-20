@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سامانه هوشمند مغایرت‌گیری مالی</title>
+    <meta name="description" content="برنامه پیشرفته مغایرت‌گیری و تحلیل گزارشات مالی با داشبورد مدیریتی مدرن." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Persian Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+    <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+
+    <style>
+      body {
+        font-family: 'Vazirmatn', sans-serif;
+        transition: background-color 0.5s ease, color 0.5s ease;
+        background-color: #f3f4f6; /* gray-100 */
+      }
+      html.dark body {
+        background-color: #020617; /* slate-950 */
+        background-image: radial-gradient(at 80% 10%, hsla(217, 80%, 25%, 0.15) 0px, transparent 50%),
+                          radial-gradient(at 0% 95%, hsla(289, 70%, 15%, 0.15) 0px, transparent 50%);
+      }
+      /* Custom scrollbar for better aesthetics */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #a0aec0; /* gray-400 */
+        border-radius: 10px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #718096; /* gray-500 */
+      }
+      html.dark ::-webkit-scrollbar-track {
+        background-color: rgba(255,255,255,0.1);
+      }
+      html.dark ::-webkit-scrollbar-thumb {
+        background-color: #475569; /* slate-600 */
+      }
+      html.dark ::-webkit-scrollbar-thumb:hover {
+        background-color: #64748b; /* slate-500 */
+      }
+       @keyframes gradient-xy {
+        0%, 100% {
+          background-size: 400% 400%;
+          background-position: 0% 50%;
+        }
+        50% {
+          background-size: 200% 200%;
+          background-position: 100% 50%;
+        }
+      }
+      .animate-gradient-xy {
+        animation: gradient-xy 15s ease infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
